@@ -1,115 +1,95 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asyourwish | นำเข้าสินค้าจีน</title>
-  <meta name="description" content="Asyourwish บริการนำเข้าสินค้าจีน ชำระเงินโรงงานจีน ประสานงานจีน-ไทย และเอกสารการค้า" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: white; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    .hero { min-height: 100vh; padding: 40px 22px; display: flex; align-items: center; background: radial-gradient(circle at top right, rgba(251,146,60,.35), transparent 35%), linear-gradient(135deg, #0f172a, #020617); }
-    .container { max-width: 1150px; margin: auto; width: 100%; }
-    .grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; }
-    .badge { display: inline-block; padding: 10px 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(255,255,255,.08); color: #fed7aa; margin-bottom: 22px; }
-    h1 { font-size: clamp(42px, 7vw, 74px); line-height: 1.05; margin-bottom: 24px; }
-    .gold { color: #fdba74; }
-    .lead { font-size: 19px; color: #cbd5e1; max-width: 620px; margin-bottom: 30px; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 14px; }
-    .btn { padding: 15px 24px; border-radius: 16px; font-weight: 700; display: inline-block; }
-    .btn-primary { background: #fb923c; color: #111827; }
-    .btn-secondary { border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); }
-    .card { border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.08); border-radius: 34px; padding: 24px; box-shadow: 0 30px 90px rgba(0,0,0,.35); }
-    .flow { background: rgba(2,6,23,.7); border-radius: 26px; padding: 26px; }
-    .flow h2 { font-size: 30px; margin: 8px 0 20px; }
-    .step { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,.07); margin: 12px 0; padding: 16px; border-radius: 18px; }
-    .num { width: 38px; height: 38px; border-radius: 50%; background: #fb923c; color: #111827; display: grid; place-items: center; font-weight: 800; }
-    section { padding: 72px 22px; }
-    .section-title { text-align: center; margin-bottom: 38px; }
-    .section-title p { color: #fdba74; font-weight: 700; }
-    .section-title h2 { font-size: clamp(30px, 4vw, 44px); }
-    .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .service { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); padding: 24px; border-radius: 26px; }
-    .service .icon { font-size: 34px; margin-bottom: 14px; }
-    .service h3 { margin-bottom: 10px; font-size: 20px; }
-    .service p { color: #cbd5e1; }
-    .white { background: #fff; color: #0f172a; }
-    .why { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-    .why p { color: #475569; margin-top: 16px; }
-    .check { background: #f1f5f9; border-radius: 18px; padding: 16px; margin: 12px 0; font-weight: 700; }
-    .cta { text-align: center; background: linear-gradient(135deg, #fb923c, #fde68a); color: #111827; border-radius: 34px; padding: 44px 24px; }
-    .cta h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 12px; }
-    .footer { text-align: center; color: #94a3b8; padding: 28px; }
-    @media (max-width: 850px) { .grid, .why { grid-template-columns: 1fr; } .services { grid-template-columns: 1fr; } .hero { padding-top: 28px; } }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Asyourwish | นำเข้าสินค้าจีน</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff7ed;color:#1e293b;line-height:1.6}
+.hero{min-height:100vh;padding:40px 22px;display:flex;align-items:center;background:linear-gradient(135deg,#fff7ed 0%,#ffedd5 35%,#fde68a 100%)}
+.container{max-width:1150px;margin:auto;width:100%}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.badge{display:inline-block;padding:10px 18px;border-radius:999px;background:#fff;color:#ea580c;font-weight:700;box-shadow:0 10px 30px rgba(251,146,60,.15);margin-bottom:24px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.05;margin-bottom:22px;color:#7c2d12}
+.gold{color:#ea580c}
+.lead{font-size:20px;color:#7c2d12;max-width:620px;margin-bottom:30px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}.btn{padding:15px 24px;border-radius:16px;font-weight:700;text-decoration:none}
+.btn-primary{background:#ea580c;color:white;box-shadow:0 14px 35px rgba(234,88,12,.25)}
+.btn-secondary{background:white;color:#ea580c;border:1px solid #fdba74}
+.card{background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-radius:36px;padding:24px;box-shadow:0 30px 70px rgba(251,146,60,.18)}
+.flow{background:white;border-radius:28px;padding:28px}.flow h2{font-size:30px;color:#7c2d12;margin:10px 0 20px}
+.step{display:flex;align-items:center;gap:14px;padding:16px;background:#fff7ed;border-radius:18px;margin:12px 0;color:#7c2d12;font-weight:600}
+.num{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#fb923c;color:white;font-weight:800}
+section{padding:72px 22px}.section-title{text-align:center;margin-bottom:40px}.section-title p{color:#ea580c;font-weight:700}.section-title h2{font-size:clamp(30px,4vw,44px);color:#7c2d12}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{background:white;padding:26px;border-radius:28px;box-shadow:0 15px 40px rgba(251,146,60,.12)}
+.service .icon{font-size:34px;margin-bottom:12px}.service h3{margin-bottom:10px;color:#7c2d12}.service p{color:#64748b}
+.white{background:white}.why{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.why h2{color:#7c2d12}.why p{color:#64748b;margin-top:16px}
+.check{background:#fff7ed;padding:16px;border-radius:18px;margin:12px 0;font-weight:700;color:#9a3412}
+.cta{text-align:center;background:linear-gradient(135deg,#fb923c,#facc15);border-radius:36px;padding:48px 24px;color:#7c2d12;box-shadow:0 20px 60px rgba(251,146,60,.25)}
+.cta h2{font-size:clamp(32px,4vw,46px);margin-bottom:14px}.footer{text-align:center;padding:30px;color:#9a3412}
+@media(max-width:850px){.grid,.why{grid-template-columns:1fr}.services{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <main>
-    <div class="hero">
-      <div class="container grid">
-        <div>
-          <div class="badge">China Import & Export Service</div>
-          <h1>นำเข้าสินค้าจีน<br><span class="gold">แบบมืออาชีพ</span></h1>
-          <p class="lead">Asyourwish ช่วยดูแลตั้งแต่ติดต่อโรงงานจีน ชำระเงิน RMB เตรียมเอกสารการค้า ไปจนถึงประสานงานส่งออกและขนส่งกลับไทย</p>
-          <div class="buttons">
-            <a class="btn btn-primary" href="tel:0844569558">โทร 084-456-9558</a>
-            <a class="btn btn-secondary" href="#services">ดูบริการของเรา</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="flow">
-            <p style="color:#fdba74;letter-spacing:.18em">ASYOURWISH</p>
-            <h2>China Sourcing Flow</h2>
-            <div class="step"><div class="num">1</div><div>ส่งรายละเอียดสินค้า</div></div>
-            <div class="step"><div class="num">2</div><div>ตรวจราคาและเอกสาร</div></div>
-            <div class="step"><div class="num">3</div><div>ชำระเงิน / สั่งผลิต</div></div>
-            <div class="step"><div class="num">4</div><div>จัดส่งและติดตามงาน</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section id="services">
-      <div class="container">
-        <div class="section-title">
-          <p>Our Services</p>
-          <h2>บริการหลักของเรา</h2>
-        </div>
-        <div class="services">
-          <div class="service"><div class="icon">💳</div><h3>ชำระเงินโรงงานจีน</h3><p>ช่วยลูกค้าไทยจ่าย RMB ให้โรงงานจีน พร้อมเอกสารประกอบธุรกรรม</p></div>
-          <div class="service"><div class="icon">🚢</div><h3>นำเข้า-ส่งออกสินค้า</h3><p>ประสานงานโรงงาน จัดซื้อสินค้า และส่งออกจากจีนมาไทย</p></div>
-          <div class="service"><div class="icon">📄</div><h3>เอกสารการค้า</h3><p>ช่วยเตรียม Contract, Invoice, Packing List และเอกสารส่งออก</p></div>
-          <div class="service"><div class="icon">🌏</div><h3>ประสานงานจีน-ไทย</h3><p>สื่อสารกับโรงงาน ธนาคาร Forwarder และ Broker ภาษาจีน/ไทย</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="white">
-      <div class="container why">
-        <div>
-          <p style="color:#ea580c;font-weight:700">Why Asyourwish</p>
-          <h2>เหมาะสำหรับคนไทยที่ต้องการซื้อของจากจีน</h2>
-          <p>เราช่วยลดความยุ่งยากเรื่องภาษา การประสานงานโรงงาน การจ่ายเงิน และเอกสารการค้า เพื่อให้คุณโฟกัสกับการขายสินค้าได้มากขึ้น</p>
-        </div>
-        <div>
-          <div class="check">✅ สื่อสารภาษาจีนกับโรงงานได้</div>
-          <div class="check">✅ ช่วยตรวจรายละเอียดก่อนจ่ายเงิน</div>
-          <div class="check">✅ มีขั้นตอนเอกสารชัดเจน</div>
-          <div class="check">✅ เหมาะกับธุรกิจนำเข้าและขายส่ง</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container cta">
-        <h2>ต้องการสั่งซื้อสินค้าจากจีน?</h2>
-        <p>ส่งรายละเอียดสินค้า ปริมาณ และรูปภาพสินค้าให้เรา เพื่อประเมินขั้นตอนและเอกสารที่ต้องใช้</p>
-        <br>
-        <a class="btn" style="background:#0f172a;color:white" href="tel:0844569558">ติดต่อ Asyourwish: 084-456-9558</a>
-      </div>
-    </section>
-  </main>
-  <div class="footer">© 2026 Asyourwish. China Import & Export Service.</div>
+<main>
+<div class="hero">
+<div class="container grid">
+<div>
+<div class="badge">✨ Premium China Import Service</div>
+<h1>Asyourwish<br><span class="gold">นำเข้าสินค้าจีน</span></h1>
+<p class="lead">บริการนำเข้าสินค้าจากจีนแบบครบวงจร ประสานงานโรงงาน จ่ายเงิน RMB และดูแลเอกสารการค้าอย่างมืออาชีพ</p>
+<div class="buttons">
+<a class="btn btn-primary" href="tel:0844569558">โทร 084-456-9558</a>
+<a class="btn btn-secondary" href="#services">ดูบริการ</a>
+</div>
+</div>
+<div class="card">
+<div class="flow">
+<p style="color:#f97316;letter-spacing:.18em;font-weight:700">ASYOURWISH</p>
+<h2>China Import Flow</h2>
+<div class="step"><div class="num">1</div><div>ส่งรายละเอียดสินค้า</div></div>
+<div class="step"><div class="num">2</div><div>ตรวจราคาและเอกสาร</div></div>
+<div class="step"><div class="num">3</div><div>ชำระเงิน / สั่งผลิต</div></div>
+<div class="step"><div class="num">4</div><div>จัดส่งกลับไทย</div></div>
+</div>
+</div>
+</div>
+</div>
+<section id="services">
+<div class="container">
+<div class="section-title"><p>OUR SERVICES</p><h2>บริการหลักของเรา</h2></div>
+<div class="services">
+<div class="service"><div class="icon">💳</div><h3>ชำระเงินโรงงานจีน</h3><p>ช่วยจ่าย RMB ให้โรงงานจีน พร้อมเอกสารประกอบธุรกรรม</p></div>
+<div class="service"><div class="icon">🚢</div><h3>นำเข้า-ส่งออกสินค้า</h3><p>ประสานงานโรงงาน จัดซื้อสินค้า และขนส่งกลับไทย</p></div>
+<div class="service"><div class="icon">📄</div><h3>เอกสารการค้า</h3><p>Invoice, Packing List, Contract และเอกสารส่งออก</p></div>
+<div class="service"><div class="icon">🌏</div><h3>จีน-ไทย ครบวงจร</h3><p>ประสานงานโรงงาน ธนาคาร และ Forwarder ภาษาจีน/ไทย</p></div>
+</div>
+</div>
+</section>
+<section class="white">
+<div class="container why">
+<div>
+<p style="color:#ea580c;font-weight:700">WHY US</p>
+<h2>ช่วยให้การซื้อของจากจีนง่ายขึ้น</h2>
+<p>Asyourwish ดูแลตั้งแต่ติดต่อโรงงานจีน ตรวจเอกสาร ไปจนถึงการขนส่ง เพื่อให้คุณโฟกัสกับการขายสินค้าได้เต็มที่</p>
+</div>
+<div>
+<div class="check">✅ สื่อสารจีนได้โดยตรง</div>
+<div class="check">✅ มีขั้นตอนชัดเจน</div>
+<div class="check">✅ เหมาะกับธุรกิจนำเข้า</div>
+<div class="check">✅ ดูแลครบตั้งแต่ต้นจนจบ</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container cta">
+<h2>พร้อมเริ่มนำเข้าสินค้าจากจีน?</h2>
+<p>ส่งรายละเอียดสินค้าให้เรา เพื่อประเมินราคาและขั้นตอนนำเข้า</p><br>
+<a class="btn btn-primary" href="tel:0844569558">ติดต่อ Asyourwish</a>
+</div>
+</section>
+</main>
+<div class="footer">© 2026 Asyourwish Import & Export</div>
 </body>
 </html>
